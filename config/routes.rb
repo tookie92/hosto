@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :proverbes
   devise_for :users
   root 'home#index'
 

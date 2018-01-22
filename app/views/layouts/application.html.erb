@@ -23,10 +23,12 @@
   <body>
 
 <div id="wrapper">
+  <%= yield :nav %>
 
-    <%= yield :nav %>
-    
-    <%= yield %>
+
+        <%= yield :tab %>
+
+          <%= yield %>
 
 </div>
 
@@ -41,5 +43,23 @@
 
       <!-- Custom Theme JavaScript -->
       <script src="../dist/js/sb-admin-2.js"></script>
+
+      <script type="text/javascript">
+        $(function(){
+          /* ========================================================================= */
+          /*	Contact Form
+          /* ========================================================================= */
+
+          //autoclose
+          $(".alert-message").alert();
+          window.setTimeout(function() { $(".alert-message").alert('close'); }, 2000);
+
+          $('#myModal').on('shown.bs.modal', function () {
+              $('#myInput').focus()
+            })
+
+          });
+      </script>
+
   </body>
 </html>

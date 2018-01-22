@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Citation:</strong>
+  <%= @proverbe.citation %>
+</p>
+
+<p>
+  <strong>Auteur:</strong>
+  <%= @proverbe.auteur %>
+</p>
+
+<%= link_to 'Edit', edit_proverbe_path(@proverbe) %> |
+<%= link_to 'Back', proverbes_path %>
